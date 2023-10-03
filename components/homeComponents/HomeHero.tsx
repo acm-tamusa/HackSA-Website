@@ -14,7 +14,7 @@ export default function HomeHero() {
         {/* !change */}
         <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
           {' '}
-          {/* !change */}Powered by HackUTD and ACM Dev
+          {/* !change */}Powered by HackUTD and ACM Development
         </p>
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
