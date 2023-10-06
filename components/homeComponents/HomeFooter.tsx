@@ -1,6 +1,3 @@
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 // Discord Icon added through fontawesome since it is not available in material ui. Discord icon has sizing isssues. Did the best I could.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
@@ -53,25 +50,23 @@ export default function HomeFooter() {
           </a>
         </div>
         {/* Social icons */} {/* !change TAMUSA EDITED DISCORD AND INSTAGRAM LINKS */}
-        <div className="space-x-8 > * + *">
+        <div className="flex flex-row flex-wrap gap-8">
           <a href="https://discord.gg/jqHZ8XsJsY" rel="noopener noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faDiscord} className="footerIcon" fontSize="small" />
+            <FontAwesomeIcon icon={faDiscord} height={36} />
           </a>
           <a
             href="https://instagram.com/acm.tamusa?igshid=MzRlODBiNWFlZA=="
             rel="noopener noreferrer"
             target="_blank"
           >
-            {/* <InstagramIcon className="footerIcon" /> */}
-            <FontAwesomeIcon icon={faInstagram} className="footerIcon" fontSize="small" />
+            <FontAwesomeIcon icon={faInstagram} height={36} />
           </a>
           <a
             href="https://www.linkedin.com/company/acm-tamusa/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            {/* <LinkedInIcon className="footerIcon" /> */}
-            <FontAwesomeIcon icon={faLinkedin} className="footerIcon" fontSize="small" />
+            <FontAwesomeIcon icon={faLinkedin} height={36} />
           </a>
           {/* SHOULD WE ADD ANY MORE SOCIAL LINKS DOWN HERE?*/}
         </div>
