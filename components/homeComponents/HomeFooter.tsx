@@ -50,7 +50,7 @@ export default function HomeFooter() {
           </a>
         </div>
         {/* Social icons */} {/* !change TAMUSA EDITED DISCORD AND INSTAGRAM LINKS */}
-        <div className="flex flex-row flex-wrap gap-8">
+        <div className="flex flex-row flex-wrap gap-6">
           <a href="https://discord.gg/jqHZ8XsJsY" rel="noopener noreferrer" target="_blank">
             <FontAwesomeIcon icon={faDiscord} height={36} />
           </a>
