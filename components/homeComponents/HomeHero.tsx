@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { buttonDatas } from '../../lib/data';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function HomeHero() {
   const router = useRouter();
@@ -15,7 +17,7 @@ export default function HomeHero() {
     >
       <div
         style={{ minHeight: 480 }}
-        className="max-w-4xl mx-auto flex flex-col justify-center items-center"
+        className="max-w-4xl mx-auto flex flex-col justify-center items-center gap-4"
       >
         {/* TAMUSA OUTLINE IMAGE */}
         <Image
@@ -25,14 +27,22 @@ export default function HomeHero() {
           height={775}
         />
         <h1 className="text-center md:text-8xl text-6xl font-bold text-white">HackSA</h1>{' '}
-        {/* !change */}
-        <p className="text-center my-4 font-semibold md:text-xl text-md text-white opacity-100">
-          {' '}
-          {/* !change */}October 23rd - 24th
+        <TimeToEvent />
+        <p className="text-center font-semibold md:text-xl text-md text-white opacity-100">
+          October 23rd - 24th
+        </p>
+        <Link href="#" passHref>
+          {/* TODO: Fix link */}
+          <a className="px-8 py-2 bg-purple-600 hover:bg-purple-700 font-bold md:text-xl text-md text-white rounded-full transition-colors">
+            REGISTER
+          </a>
+        </Link>
+        <p className="text-center md:text-xl text-md text-white opacity-100">
+          JOIN US TO MAKE THE MOST INCLUSIVE HACKATHON IN TEXAS
         </p>
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
-      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 > *">
+      <div className="flex flex-col items-center md:flex-row md:justify-around mt-6 px-44 md:space-y-0 space-y-3 > *">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
@@ -44,5 +54,42 @@ export default function HomeHero() {
         ))}
       </div>
     </section>
+  );
+}
+
+function TimeToEvent() {
+  const [currentTime, setCurrentTime] = useState(Date.now());
+  const eventStart = new Date('23 October 2023 10:00').getTime();
+
+  useEffect(() => {
+    const interval = setInterval(() => setCurrentTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const getTimeDifference = (): string => {
+    const diff = eventStart - currentTime;
+    const days = Math.floor(diff / 8.64e7)
+      .toString()
+      .padStart(2, '0');
+    const hours = Math.floor((diff % 8.64e7) / 3.6e6)
+      .toString()
+      .padStart(2, '0');
+    const minutes = Math.floor((diff % 3.6e6) / 6e4)
+      .toString()
+      .padStart(2, '0');
+    const seconds = Math.floor((diff % 6e4) / 1e3)
+      .toString()
+      .padStart(2, '0');
+    return `${days} : ${hours} : ${minutes} : ${seconds}`;
+  };
+
+  return currentTime < eventStart ? (
+    <p className="text-white text-md">
+      <strong>TIME UNTIL HACKSA</strong>: <span>{getTimeDifference()}</span>
+    </p>
+  ) : (
+    <p>HAPPENING NOW</p>
   );
 }
