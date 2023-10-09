@@ -28,7 +28,7 @@ export default function Register() {
       schoolQuestions,
       hackathonExperienceQuestions,
       eventInfoQuestions,
-      sponsorInfoQuestions,
+      // sponsorInfoQuestions,
     },
   } = hackPortalConfig;
 
@@ -183,26 +183,26 @@ export default function Register() {
   };
 
   return (
-    <div className="flex flex-col flex-grow bg-white">
+    <div className="flex flex-col flex-grow" style={{ backgroundImage: 'url("assets/b4a9c4.png")' }}>
       <Head>
-        <title>Hacker Registration</title>
+        <title>Hacker Registration | HackSA</title>
         <meta name="description" content="Register for [HACKATHON NAME]" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section id="jumbotron" className="p-2 px-6">
+      <section id="jumbotron" className="p-2 px-6" style={{ backgroundImage: 'url("assets/18034e.png")' }}>
         <div className="max-w-4xl py-6 mx-auto flex flex-col items-center">
-          <div className="registrationTitle text-4xl font-bold text-center">
+          <div className="registrationTitle text-4xl font-bold text-center text-customPurple">
             Hacker Registration
           </div>
-          <div className="text-1xl my-4 font-bold font-small text-center">
+          <div className="text-1xl my-4 font-bold font-small text-center text-customPurple">
             Please fill out the following fields. The application should take approximately 5
             minutes.
           </div>
         </div>
       </section>
 
-      <section className="flex justify-center">
+      <section className="flex justify-center text-customPurple2">
         <Formik
           initialValues={formInitialValues}
           //validation
@@ -221,9 +221,9 @@ export default function Register() {
             for (let obj of eventInfoQuestions) {
               errors = setErrors(obj, values, errors);
             }
-            for (let obj of sponsorInfoQuestions) {
-              errors = setErrors(obj, values, errors);
-            }
+            // for (let obj of sponsorInfoQuestions) {
+            //   errors = setErrors(obj, values, errors);
+            // }
 
             //additional custom error validation
             if (
@@ -299,10 +299,10 @@ export default function Register() {
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">Sponsor Info</div>
+              {/* <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">Sponsor Info</div>
               {sponsorInfoQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
-              ))}
+              ))} */}
 
               {/* Resume Upload */}
               <label className="mt-4">
@@ -322,7 +322,7 @@ export default function Register() {
               <div className="my-8">
                 <button
                   type="submit"
-                  className="mr-auto cursor-pointer px-4 py-2 rounded-md bg-blue-200 hover:bg-blue-300"
+                  className="mr-auto cursor-pointer px-4 py-2 rounded-md bg-customPurple hover:bg-customPurple3"
                   onClick={() => setFormValid(!(!isValid || !dirty))}
                 >
                   Submit
