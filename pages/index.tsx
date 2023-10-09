@@ -11,6 +11,7 @@ import HomeChallenges from '../components/homeComponents/HomeChallenges';
 import HomeTeam from '../components/homeComponents/HomeTeam';
 import HomeSponsors from '../components/homeComponents/HomeSponsors';
 import HomeFooter from '../components/homeComponents/HomeFooter';
+import HomeFaq from '../components/homeComponents/HomeFaq';
 
 /**
  * The home page.
@@ -47,11 +48,10 @@ export default function Home(props: {
         <meta name="description" content="A default HackPortal instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <HomeNotif />
       <HomeHero />
-      <HomeVideoStats />
       <HomeAbout />
+      {/* <HomeVideoStats /> */} {/* !changed Commented this video stuff out from the template*/}
       <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
       <HomeChallenges challenges={props.challenges} />
       <HomeTeam members={props.fetchedMembers} />
