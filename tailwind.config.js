@@ -11,6 +11,11 @@ module.exports = {
         secondaryDark: '#BABFFF',
         complementary: '#4C4950', //gray
         complementaryDark: '#252427',
+        customPurple: '#9057ae', //#9057ae
+        customPurple2: '#18034e', //
+        customPurple3: '#4d188d', //
+        customPurple4: '#b4a9c4', //
+
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
@@ -58,3 +63,4 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/forms')],
 };
+
