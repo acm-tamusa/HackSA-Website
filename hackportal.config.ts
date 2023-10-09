@@ -144,7 +144,7 @@ export const hackPortalConfig: HackPortalConfig = {
           {
             //University question
             question:
-              'This event is for college students worldwide. Which university do you attend?',
+              'This event is for college students in the Texas region. Which university do you attend?',
             id: 'university',
             name: 'university',
             required: true,
@@ -244,7 +244,7 @@ export const hackPortalConfig: HackPortalConfig = {
           },
           {
             //Heard from question
-            question: 'Where did you hear about HackPortal?',
+            question: 'Where did you hear about HackSA?',
             required: true,
             id: 'heardFrom',
             name: 'heardFrom',
@@ -255,8 +255,8 @@ export const hackPortalConfig: HackPortalConfig = {
                 value: 'Instagram',
               },
               {
-                title: 'Twitter',
-                value: 'Twitter',
+                title: 'X (Twitter)',
+                value: 'X (Twitter)',
               },
               {
                 title: 'Event Site',
@@ -404,25 +404,10 @@ export const hackPortalConfig: HackPortalConfig = {
             initialValue: [],
             options: [
               {
-                title: 'State Farm',
-                value: 'State Farm',
+                title: 'USAA',
+                value: 'USAA',
               },
-              {
-                title: 'American Airlines',
-                value: 'American Airlines',
-              },
-              {
-                title: 'Capital One',
-                value: 'Capital One',
-              },
-              {
-                title: 'Ebay',
-                value: 'Ebay',
-              },
-              {
-                title: 'Facebook',
-                value: 'Facebook',
-              },
+
             ],
           },
         ],
