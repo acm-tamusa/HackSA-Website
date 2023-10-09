@@ -31,7 +31,7 @@ export default function HomeHero() {
         <p className="text-center font-semibold md:text-xl text-md text-white opacity-100">
           October 23rd - 24th
         </p>
-        <Link href="#" passHref>
+        <Link href="/auth" passHref>
           {/* TODO: Fix link */}
           <a className="px-8 py-2 bg-purple-600 hover:bg-purple-700 font-bold md:text-xl text-md text-white rounded-full transition-colors">
             REGISTER
