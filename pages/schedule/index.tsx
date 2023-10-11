@@ -94,7 +94,7 @@ type AppointmentProps = Appointments.AppointmentProps & WithStyles<typeof styles
 type AppointmentContentProps = Appointments.AppointmentContentProps & WithStyles<typeof styles>;
 
 const isWeekEnd = (date: Date): boolean => date.getDay() === 0 || date.getDay() === 6;
-const defaultCurrentDate = new Date(2021, 10, 13, 9, 0);
+const defaultCurrentDate = new Date(2023, 9, 23, 9, 0);
 {
   /* !!!change */
 }
@@ -254,9 +254,10 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
   ];
 
   return (
-    <>
-      <div className="text-6xl font-black p-6">Schedule</div>
+  <div style={{ backgroundImage: `url('/assets/schedulebg2.png')`, overflowX: 'auto', overflowY: 'auto' }} className="bg-[url('/assets/schedulebg2.png')] flex flex-col flex-grow text-2xl text-customPurple2 text-center pt-4">
+      <div className="text-6xl text-customPurple text-left ml-8">Schedule</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
+        
         {/* Calendar */}
         <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-md">
           <Paper>
@@ -281,8 +282,8 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-white p-4">
-          <section>
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-customPurple7 p-4"> 
+        <section>
             {eventData.title === '' ? (
               <div className="text-2xl">Click on an event for more info</div>
             ) : (
@@ -333,11 +334,12 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
               </div>
             </div>
           </section>
-
+          
           <div className="text-right">*All events are given in CST</div>
         </div>
       </div>
-    </>
+      </div>   
+ 
   );
 }
 
