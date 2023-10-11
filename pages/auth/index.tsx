@@ -38,9 +38,10 @@ export default function AuthPage() {
         await updateUser(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        setErrorMsg(errorMessage);
+        //const errorCode = error.code;
+        //const errorMessage = error.message;
+        //setErrorMsg(errorMessage);
+        setErrorMsg('Account not found. Please create one or try a different login method.');
       });
   };
 
