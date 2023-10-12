@@ -19,7 +19,6 @@ module.exports = {
         customPurple6: '#4b1985',
         customPurple7: '#E3DFFF',
         customPurple8: '#17024D',
-
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
@@ -67,4 +66,3 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/forms')],
 };
-
