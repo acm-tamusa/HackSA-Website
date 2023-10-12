@@ -195,6 +195,7 @@ export default function Register() {
     <div className="registrationTitle border-b-2 border-customPurple text-4xl font-bold text-center text-customPurple">
       Hacker Registration
     </div>
+    
     <div className="text-1xl my-4 font-bold font-small text-center text-customPurple7">
       Please fill out the following fields. The application should take approximately 5 minutes.
     </div>
@@ -202,7 +203,7 @@ export default function Register() {
 </section>
 
 
-      <section className="bg-customPurple7 bg-cover bg-no-repeat lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-customPurple2">
+      <section className="bg-customPurple7 bg-cover bg-repeat lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-customPurple2">
         <Formik
           initialValues={formInitialValues}
           //validation
@@ -275,7 +276,7 @@ export default function Register() {
             <Form
               onKeyDown={onKeyDown}
               noValidate
-              className="registrationForm flex flex-col max-w-4xl px-6 w-[56rem] text-lg">
+              className="registrationForm flex flex-col max-w-4xl px-6 w-full text-lg">
               
               <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">General</div>
               {generalQuestions.map((obj, idx) => (
@@ -305,7 +306,7 @@ export default function Register() {
               ))} */}
 
               {/* Resume Upload */}
-              <label className="mt-4">
+              {/* <label className="mt-4">
                 Upload your resume:
                 <br />
                 <input
@@ -316,7 +317,7 @@ export default function Register() {
                   accept=".pdf, .doc, .docx, image/png, image/jpeg, .txt, .tex, .rtf"
                 />
                 <br />
-              </label>
+              </label> */}
 
               {/* Submit */}
               <div className="my-8">

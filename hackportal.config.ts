@@ -144,7 +144,7 @@ export const hackPortalConfig: HackPortalConfig = {
           {
             //University question
             question:
-              'This event is for college students in the Texas region. Which university do you attend?',
+              'This event is for college students in the \n Texas region. Which university do you attend?',
             id: 'university',
             name: 'university',
             required: true,
@@ -345,10 +345,27 @@ export const hackPortalConfig: HackPortalConfig = {
                 title: 'Eggs',
                 value: 'Eggs',
               },
+              {
+                title: 'Other',
+                value: 'Other',
+              },         
             ],
           },
         ],
       },
+      {
+      textAreaQuestions: [
+        {
+          //Other Allergy question
+          question: 'Specific Allergies',
+          id: 'specificAllergies',
+          name: 'specificAllergies',
+          required: false,
+          initialValue: '',
+          placeholder: 'List any specific allergies or dietary restrictions here',
+        },
+      ]
+    },
       {
         textAreaQuestions: [
           {
