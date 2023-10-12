@@ -254,10 +254,16 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
   ];
 
   return (
-  <div style={{ backgroundImage: `url('/assets/schedulebg2.png')`, overflowX: 'auto', overflowY: 'auto' }} className="bg-[url('/assets/schedulebg2.png')] flex flex-col flex-grow text-2xl text-customPurple2 text-center pt-4">
+    <div
+      style={{
+        backgroundImage: `url('/assets/schedulebg2.png')`,
+        overflowX: 'auto',
+        overflowY: 'auto',
+      }}
+      className="bg-[url('/assets/schedulebg2.png')] flex flex-col flex-grow text-2xl text-customPurple2 text-center pt-4"
+    >
       <div className="text-6xl text-customPurple text-left ml-8">Schedule</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
-        
         {/* Calendar */}
         <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-md">
           <Paper>
@@ -282,8 +288,8 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-customPurple7 p-4"> 
-        <section>
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-customPurple7 p-4">
+          <section>
             {eventData.title === '' ? (
               <div className="text-2xl">Click on an event for more info</div>
             ) : (
@@ -334,12 +340,11 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
               </div>
             </div>
           </section>
-          
+
           <div className="text-right">*All events are given in CST</div>
         </div>
       </div>
-      </div>   
- 
+    </div>
   );
 }
 
