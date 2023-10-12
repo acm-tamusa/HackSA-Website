@@ -3,15 +3,12 @@ import { GetServerSideProps } from 'next';
 import { useEffect, useState } from 'react';
 import { RequestHelper } from '../lib/request-helper';
 import HomeHero from '../components/homeComponents/HomeHero';
-import HomeNotif from '../components/homeComponents/HomeNotif';
-import HomeVideoStats from '../components/homeComponents/HomeVideoStats';
 import HomeAbout from '../components/homeComponents/HomeAbout';
 import HomeSpeakers from '../components/homeComponents/HomeSpeakers';
 import HomeChallenges from '../components/homeComponents/HomeChallenges';
 import HomeTeam from '../components/homeComponents/HomeTeam';
 import HomeSponsors from '../components/homeComponents/HomeSponsors';
 import HomeFooter from '../components/homeComponents/HomeFooter';
-import HomeFaq from '../components/homeComponents/HomeFaq';
 
 /**
  * The home page.
@@ -48,7 +45,6 @@ export default function Home(props: {
         <meta name="description" content="A default HackPortal instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeNotif />
       <HomeHero />
       <HomeAbout />
       {/* <HomeVideoStats /> */} {/* !changed Commented this video stuff out from the template*/}
