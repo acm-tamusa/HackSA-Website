@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
+import styles from './profile.module.css';
 import { useAuthContext } from '../lib/user/AuthContext';
 import LoadIcon from '../components/LoadIcon';
 import { getFileExtension } from '../lib/util';
@@ -68,45 +69,103 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="p-8 w-full">
+    <div
+      className="p-8 w-full"
+      style={{
+        backgroundImage:
+          "url('https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Ftransparent_purpleBG.png?alt=media&token=d5ae999d-54aa-462c-a3f1-bf586de7800a&_gl=1*9e1u44*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc5MjM5My4xOC4xLjE2OTY3OTQ3NjMuNDkuMC4w')",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold">User Profile</h1>
+        <h1 className="text-3xl font-bold" style={{ color: 'white', textShadow: '0 0 3px white' }}>
+          {' '}
+          Profile
+        </h1>
         <section className="w-full py-5">
           <div className="flex flex-col md:flex-row gap-x-10">
             <div
-              className="bg-gray-300 w-full md:w-2/3 rounded-xl p-4 flex flex-col justify-around"
-              style={{ minHeight: '500px' }}
+              className={`bg-gradient-to-b from-purple-900 via-pink-800 to-black w-full md:w-2/3 rounded-xl p-4 flex flex-col justify-around`}
+              style={{
+                minHeight: '500px',
+              }}
             >
-              <h1 className="font-bold text-xl text-center">HackPortal</h1> {/* !change */}
+              <h1
+                className="font-bold text-xl text-center"
+                style={{ color: 'white', textShadow: '0 0 2px white' }}
+              >
+                HackSA
+              </h1>{' '}
+              {/* !change */}
               <div className="mx-auto">
                 <QRCode data={'hack:' + user.id} loading={false} width={200} height={200} />
               </div>
               <div>
-                <h1 className="text-center font-bold text-xl">{`${profile.user.firstName} ${profile.user.lastName}`}</h1>
-                <p className="text-center">{profile.user.permissions[0]}</p>
+                <h1
+                  className="text-center font-bold text-xl"
+                  style={{ color: 'white', textShadow: '0 0 2px white' }}
+                >{`${profile.user.firstName} ${profile.user.lastName}`}</h1>
+                <p className="text-center" style={{ color: '#E0E0E0' }}>
+                  {profile.user.permissions[0]}
+                </p>
               </div>
             </div>
             <div className="w-full my-5">
               <div className="profile-view">
-                <div className="profile-view-name flex flex-col gap-y-2">
-                  <div className="font-bold text-xl">Name</div>
-                  <h1 className="font-bold">{`${profile.user.firstName} ${profile.user.lastName}`}</h1>
+                <div className="profile-view-name flex flex-col gap-y-2 ">
+                  <div
+                    className="font-bold text-xl"
+                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  >
+                    Name
+                  </div>
+                  <h1
+                    className="font-bold"
+                    style={{ color: '#E0E0E0' }}
+                  >{`${profile.user.firstName} ${profile.user.lastName}`}</h1>
                 </div>
                 <div className="profile-view-role flex flex-col gap-y-2">
-                  <div className="font-bold text-xl">Role</div>
-                  <h1 className="font-bold">{profile.user.permissions[0]}</h1>
+                  <div
+                    className="font-bold text-xl"
+                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  >
+                    Role
+                  </div>
+                  <h1 className="font-bold" style={{ color: '#E0E0E0' }}>
+                    {profile.user.permissions[0]}
+                  </h1>
                 </div>
                 <div className="profile-view-univ flex flex-col gap-y-2">
-                  <div className="font-bold text-xl">University</div>
-                  <h1 className="font-bold">{profile.university}</h1>
+                  <div
+                    className="font-bold text-xl"
+                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  >
+                    University
+                  </div>
+                  <h1 className="font-bold" style={{ color: '#E0E0E0' }}>
+                    {profile.university}
+                  </h1>
                 </div>
                 <div className="profile-view-major flex flex-col gap-y-2">
-                  <div className="font-bold text-xl">Major</div>
-                  <h1 className="font-bold">{profile.major}</h1>
+                  <div
+                    className="font-bold text-xl"
+                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  >
+                    Major
+                  </div>
+                  <h1 className="font-bold" style={{ color: '#E0E0E0' }}>
+                    {profile.major}
+                  </h1>
                 </div>
                 <div className="profile-view-stlvl flex flex-col gap-y-2">
-                  <div className="font-bold text-xl">Level of Study</div>
-                  <h1 className="font-bold">{profile.studyLevel}</h1>
+                  <div
+                    className="font-bold text-xl"
+                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  >
+                    Level of Study
+                  </div>
+                  <h1 className="font-bold" style={{ color: '#E0E0E0' }}>
+                    {profile.studyLevel}
+                  </h1>
                 </div>
                 <div>
                   {!uploading ? (
