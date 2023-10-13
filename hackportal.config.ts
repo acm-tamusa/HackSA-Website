@@ -348,24 +348,24 @@ export const hackPortalConfig: HackPortalConfig = {
               {
                 title: 'Other',
                 value: 'Other',
-              },         
+              },
             ],
           },
         ],
       },
       {
-      textAreaQuestions: [
-        {
-          //Other Allergy question
-          question: 'Specific Allergies',
-          id: 'specificAllergies',
-          name: 'specificAllergies',
-          required: false,
-          initialValue: '',
-          placeholder: 'List any specific allergies or dietary restrictions here',
-        },
-      ]
-    },
+        textAreaQuestions: [
+          {
+            //Other Allergy question
+            question: 'Specific Allergies',
+            id: 'specificAllergies',
+            name: 'specificAllergies',
+            required: false,
+            initialValue: '',
+            placeholder: 'List any specific allergies or dietary restrictions here',
+          },
+        ],
+      },
       {
         textAreaQuestions: [
           {
@@ -424,7 +424,6 @@ export const hackPortalConfig: HackPortalConfig = {
                 title: 'USAA',
                 value: 'USAA',
               },
-
             ],
           },
         ],
