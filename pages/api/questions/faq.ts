@@ -22,6 +22,7 @@ async function getFaqs(req: NextApiRequest, res: NextApiResponse) {
   snapshot.forEach((doc) => {
     data.push(doc.data());
   });
+  console.log(data);
   res.json(data);
 }
 
