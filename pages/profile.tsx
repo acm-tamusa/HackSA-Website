@@ -77,7 +77,7 @@ export default function ProfilePage() {
       }}
     >
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold" style={{ color: 'white', textShadow: '0 0 3px white' }}>
+        <h1 className="text-3xl font-bold" style={{ color: 'white', textShadow: '0 0 4px white' }}>
           {' '}
           Profile
         </h1>
@@ -91,7 +91,7 @@ export default function ProfilePage() {
             >
               <h1
                 className="font-bold text-xl text-center"
-                style={{ color: 'white', textShadow: '0 0 2px white' }}
+                style={{ color: 'white', textShadow: '0 0 4px white' }}
               >
                 HackSA
               </h1>{' '}
@@ -102,7 +102,7 @@ export default function ProfilePage() {
               <div>
                 <h1
                   className="text-center font-bold text-xl"
-                  style={{ color: 'white', textShadow: '0 0 2px white' }}
+                  style={{ color: 'white', textShadow: '0 0 4px white' }}
                 >{`${profile.user.firstName} ${profile.user.lastName}`}</h1>
                 <p className="text-center" style={{ color: '#E0E0E0' }}>
                   {profile.user.permissions[0]}
@@ -114,7 +114,7 @@ export default function ProfilePage() {
                 <div className="profile-view-name flex flex-col gap-y-2 ">
                   <div
                     className="font-bold text-xl"
-                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                    style={{ color: 'white', textShadow: '0 0 4px white' }}
                   >
                     Name
                   </div>
@@ -126,7 +126,7 @@ export default function ProfilePage() {
                 <div className="profile-view-role flex flex-col gap-y-2">
                   <div
                     className="font-bold text-xl"
-                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                    style={{ color: 'white', textShadow: '0 0 4px white' }}
                   >
                     Role
                   </div>
@@ -137,7 +137,7 @@ export default function ProfilePage() {
                 <div className="profile-view-univ flex flex-col gap-y-2">
                   <div
                     className="font-bold text-xl"
-                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                    style={{ color: 'white', textShadow: '0 0 4px white' }}
                   >
                     University
                   </div>
@@ -148,7 +148,7 @@ export default function ProfilePage() {
                 <div className="profile-view-major flex flex-col gap-y-2">
                   <div
                     className="font-bold text-xl"
-                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                    style={{ color: 'white', textShadow: '0 0 4px white' }}
                   >
                     Major
                   </div>
@@ -159,7 +159,7 @@ export default function ProfilePage() {
                 <div className="profile-view-stlvl flex flex-col gap-y-2">
                   <div
                     className="font-bold text-xl"
-                    style={{ color: 'white', textShadow: '0 0 2px white' }}
+                    style={{ color: 'white', textShadow: '0 0 4px white' }}
                   >
                     Level of Study
                   </div>
