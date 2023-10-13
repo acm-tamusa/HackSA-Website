@@ -170,7 +170,7 @@ export default function ProfilePage() {
                 <div>
                   {!uploading ? (
                     <>
-                      <input
+                      {/* <input
                         id="resume"
                         style={{ display: 'none' }}
                         type="file"
@@ -184,7 +184,7 @@ export default function ProfilePage() {
                         htmlFor="resume"
                       >
                         Update Resume
-                      </label>
+                      </label> */}
                     </>
                   ) : (
                     <LoadIcon width={16} height={16} />
