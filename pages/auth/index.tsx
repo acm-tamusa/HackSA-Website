@@ -38,9 +38,12 @@ export default function AuthPage() {
         await updateUser(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        setErrorMsg(errorMessage);
+        //const errorCode = error.code;
+        //const errorMessage = error.message;
+        //setErrorMsg(errorMessage);
+        setErrorMsg(
+          'Invalid Account Information. Please check your email and password or create an account.',
+        );
       });
   };
 

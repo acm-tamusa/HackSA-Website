@@ -12,7 +12,13 @@ import { RequestHelper } from '../../lib/request-helper';
  *
  * Route: /about/faq
  */
-export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion[] }) {
+export default function FaqPage({
+  fetchedFaqs,
+  changeTitle,
+}: {
+  fetchedFaqs: AnsweredQuestion[];
+  changeTitle: boolean;
+}) {
   const [loading, setLoading] = useState(true);
   const [faqs, setFaqs] = useState<AnsweredQuestion[]>([]);
   const [disclosuresStatus, setDisclosureStatus] = useState<boolean[]>();
@@ -46,14 +52,22 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
 
   return (
     <div className="flex flex-col flex-grow">
-      <Head>
-        <title>HackPortal</title>
-        <meta name="description" content="HackPortal's Frequently Asked Questions" />
-      </Head>
+      {changeTitle && (
+        <Head>
+          <title>HackPortal</title>
+          <meta name="description" content="HackPortal's Frequently Asked Questions" />
+        </Head>
+      )}
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
-        <div className="flex flex-row justify-between items-center py-2">
-          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
+        <div
+          className={`flex flex-row items-center py-2 ${
+            changeTitle ? 'justify-between' : 'justify-center'
+          }`}
+        >
+          {changeTitle && (
+            <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
+          )}
           <div className="flex flex-row items-center gap-x-2">
             <button
               onClick={() => {
@@ -153,6 +167,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       fetchedFaqs: data,
+      changeTitle: true,
     },
   };
 };

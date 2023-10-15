@@ -345,7 +345,24 @@ export const hackPortalConfig: HackPortalConfig = {
                 title: 'Eggs',
                 value: 'Eggs',
               },
+              {
+                title: 'Other',
+                value: 'Other',
+              },
             ],
+          },
+        ],
+      },
+      {
+        textAreaQuestions: [
+          {
+            //Other Allergy question
+            question: 'Specific Allergies',
+            id: 'specificAllergies',
+            name: 'specificAllergies',
+            required: false,
+            initialValue: '',
+            placeholder: 'List any specific allergies or dietary restrictions here',
           },
         ],
       },
@@ -407,7 +424,6 @@ export const hackPortalConfig: HackPortalConfig = {
                 title: 'USAA',
                 value: 'USAA',
               },
-
             ],
           },
         ],

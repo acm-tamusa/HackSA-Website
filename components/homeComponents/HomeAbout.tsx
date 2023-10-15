@@ -1,4 +1,6 @@
-export default function HomeAbout() {
+import HomeFaq from './HomeFaq';
+
+export default function HomeAbout(props: { answeredQuestions: AnsweredQuestion[] }) {
   return (
     <section
       className="md:p-12 p-6 text-complementary"
@@ -25,6 +27,7 @@ export default function HomeAbout() {
         <h4 className="lg:text-8xl md:text-7xl sm:text-6xl text-5xl text-center excelsior-script">
           Frequently Asked Questions
         </h4>
+        <HomeFaq answeredQuestion={props.answeredQuestions} />
       </div>
     </section>
   );

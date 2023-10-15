@@ -183,26 +183,34 @@ export default function Register() {
   };
 
   return (
-    <div className="flex flex-col flex-grow" style={{ backgroundImage: 'url("assets/18034e.png")' }}>
+    <div
+      className="flex flex-col flex-grow"
+      style={{ backgroundImage: 'url("assets/schedulebg.png")' }}
+    >
       <Head>
         <title>Hacker Registration | HackSA</title>
         <meta name="description" content="Register for [HACKATHON NAME]" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section id="jumbotron" className="p-2 px-6" style={{ backgroundImage: 'url("assets/18034e.png")' }}>
+      <section
+        id="jumbotron"
+        className="p-2 px-6"
+        style={{ backgroundImage: 'url("assets/18034e.png")' }}
+      >
         <div className="max-w-4xl py-6 mx-auto flex flex-col items-center">
-          <div className="registrationTitle text-4xl font-bold text-center text-customPurple4">
+          <div className="registrationTitle border-b-2 border-customPurple text-4xl font-bold text-center text-customPurple">
             Hacker Registration
           </div>
-          <div className="text-1xl my-4 font-bold font-small text-center text-customPurple4">
+
+          <div className="text-1xl my-4 font-bold font-small text-center text-customPurple7">
             Please fill out the following fields. The application should take approximately 5
             minutes.
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary bg-cover bg-no-repeat lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-customPurple2">
+      <section className="bg-customPurple7 bg-cover bg-repeat lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-customPurple2">
         <Formik
           initialValues={formInitialValues}
           //validation
@@ -275,26 +283,32 @@ export default function Register() {
             <Form
               onKeyDown={onKeyDown}
               noValidate
-              className="registrationForm flex flex-col max-w-4xl px-6 w-[56rem] text-lg">
-              
-              <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">General</div>
+              className="registrationForm flex flex-col max-w-4xl px-6 w-full text-lg"
+            >
+              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+                General
+              </div>
               {generalQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">School Info</div>
+              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+                School Info
+              </div>
               {schoolQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">
+              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
                 Hackathon Experience
               </div>
               {hackathonExperienceQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-black mr-auto mt-8">Event Info</div>
+              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+                Event Info
+              </div>
               {eventInfoQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
@@ -305,7 +319,7 @@ export default function Register() {
               ))} */}
 
               {/* Resume Upload */}
-              <label className="mt-4">
+              {/* <label className="mt-4">
                 Upload your resume:
                 <br />
                 <input
@@ -316,7 +330,7 @@ export default function Register() {
                   accept=".pdf, .doc, .docx, image/png, image/jpeg, .txt, .tex, .rtf"
                 />
                 <br />
-              </label>
+              </label> */}
 
               {/* Submit */}
               <div className="my-8">
