@@ -90,13 +90,17 @@ export default function Dashboard(props: {
     <>
       <div className="flex flex-wrap flex-grow">
         <Head>
-          <title>HackPortal - Dashboard</title> {/* !change */}
-          <meta name="description" content="HackPortal's Dashboard" />
+          <title>HackSA - Dashboard</title> {/* !change */}
+          <meta name="description" content="HackSA's Dashboard" />
         </Head>
 
         <Sidebar />
 
-        <section id="mainContent" className="lg:w-7/8 md:w-6/7 w-full px-6 py-3 bg-white">
+        <section
+          id="mainContent"
+          className="lg:w-7/8 md:w-6/7 w-full px-6 py-3"
+          style={{ backgroundImage: 'url(assets/25.png)', backgroundSize: 'cover' }} //change here
+        >
           <DashboardHeader />
           {/* Spotlight & Announcements */}
           <div className="flex flex-wrap my-16">
@@ -137,8 +141,13 @@ export default function Dashboard(props: {
               </div>
             )}
             {/* Announcements */}
-            <div className={`${eventCount > 0 ? 'lg:w-2/5' : 'lg:w-full'} w-full h-96`}>
-              <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
+            <div className={`${eventCount > 0 ? 'lg:w-2/5' : 'lg:w-full'} w-full h-full`}>
+              <h1
+                className="mx-auto mt-0 bg-white text-3xl text-center text-black p-4 rounded-xl border-black border-2 text-left w-full mb-4"
+                style={{ opacity: '0.7' }}
+              >
+                Announcements
+              </h1>
               <div id="announcement-items" className="overflow-y-scroll h-9/10">
                 {announcements.map((announcement, idx) => {
                   const dateObj = new Date(announcement.timestamp!);
@@ -158,8 +167,16 @@ export default function Dashboard(props: {
           </div>
 
           {/* Challenges */}
-          <div className="flex flex-col items-center my-8">
-            <h1 className="md:text-3xl text-xl font-black">Challenges</h1>
+          <div
+            className="flex flex-col items-center p-2 rounded-xl border-black border-2 my-8"
+            style={{ backgroundImage: 'url(assets/24.png)', backgroundSize: 'cover' }}
+          >
+            <h1
+              className="bg-white text-3xl text-center text-black p-4 rounded-xl border-black border-2 text-left w- mb-4"
+              style={{ opacity: '0.7' }}
+            >
+              Challenges
+            </h1>
             {/* Cards */}
             <div className="challengeGrid my-8">
               {challenges.map(({ title, description, prizes }, idx) => (
