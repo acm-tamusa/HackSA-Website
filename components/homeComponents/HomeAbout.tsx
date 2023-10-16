@@ -5,26 +5,24 @@ export default function HomeAbout(props: { answeredQuestions: AnsweredQuestion[]
     <section
       className="md:p-12 p-6 text-complementary"
       style={{
-        // backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Fburgundy.jpg?alt=media&token=8cf817bc-0d29-4b69-8fa8-07eac0bcf34d&_gl=1*1xh9ndu*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc5MjM5My4xOC4xLjE2OTY3OTI4NDEuMjMuMC4w')",
+        background:
+          'rgb(27,87,35) linear-gradient(21deg, rgba(27,87,35,1) 0%, rgba(55,175,204,1) 50%, rgba(53,55,185,1) 71%, rgba(52,8,177,1) 100%)',
         backgroundSize: 'cover',
+        backgroundImage: "url('public/assets/schedulebg2.png')",
         backgroundBlendMode: 'multiply',
-        backgroundColor: '#612C96', // !change I have no idead what color to make this stuff so I just made it look good
-        backgroundImage: "url('')",
-        backgroundPosition: 'center',
         opacity: '0.99',
       }}
     >
-      <h1 className="md:text-4xl text-2xl font-bold my-4 text-white">About HackSA</h1>{' '}
-      {/* !change */}
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-white">About HackSA</h1>
       <div className="md:text-base text-sm text-white">
-        HackSA is the first 24-hour hackathon hosted by ACM TAMUSA.
+        HackSA is the first 24-hour hackathon hosted by ACM TAMUSA. We are excited to bring this
+        event
         <br />
         <br />
-        FILL THIS IN LATER - BLEEH BLAHH BLEEH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH
-        BLAH BLAH BLAH BLAH BLAH BLAH FILL THIS IN LATER
+        HackSA is a place for students to learn, build, and share their creations in a friendly and
         <br />
         <br />
-        <h4 className="lg:text-8xl md:text-7xl sm:text-6xl text-5xl text-center excelsior-script">
+        <h4 className="lg:text-5xl md:text-7xl sm:text-6xl text-5xl text-center excelsior-script">
           Frequently Asked Questions
         </h4>
         <HomeFaq answeredQuestion={props.answeredQuestions} />

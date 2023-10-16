@@ -25,6 +25,7 @@ export default function HomeHero() {
           alt="Tamusa Outline"
           width={1000}
           height={775}
+          priority={true}
         />
         <h1 className="text-center md:text-8xl text-6xl font-bold text-white">HackSA</h1>{' '}
         <TimeToEvent />
@@ -42,7 +43,7 @@ export default function HomeHero() {
         </p>
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
-      <div className="flex flex-col items-center md:flex-row md:justify-around mt-6 px-44 md:space-y-0 space-y-3 > *">
+      {/* <div className="flex flex-col items-center md:flex-row md:justify-around mt-6 px-44 md:space-y-0 space-y-3 > *">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
@@ -52,7 +53,7 @@ export default function HomeHero() {
             {button.text}
           </button>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
