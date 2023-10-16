@@ -28,13 +28,13 @@ export default function DashboardHeader() {
   return (
     <section>
       <header className="md:inline hidden justify-center py-2 md:p-4 items-center">
-        <div className="mx-auto flex flex-wrap justify-center lg:text-xl text-lg font-header text-center">
-          <NavLink href="/dashboard" exact={true} className="mx-4">
-            HackCenter
+        <div className="mx-auto flex flex-wrap justify-center lg:text-xl text-lg font-header text-white text-center rounded-xl bg-customPurple2 p-4 inline-block w-1/6 hover:bg-gray-600">
+          <NavLink href="/profile" exact={true} className="mx-4">
+            Hacker Profile
           </NavLink>
-          <NavLink href="/dashboard/questions" exact={true} className="mx-4">
+          {/* <NavLink href="/dashboard/questions" exact={true} className="mx-4">
             Ask a Question
-          </NavLink>
+          </NavLink> */}
         </div>
       </header>
       <div className="my-4 md:hidden ">
@@ -44,10 +44,10 @@ export default function DashboardHeader() {
         <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
           <ul className="">
             <li className="p-2 hover:bg-secondary cursor-pointer">
-              <Link href="/dashboard">HackCenter</Link>
-            </li>
+              <Link href="/profile">Hacker Profile</Link>
+              {/* </li>
             <li className="p-2 hover:bg-secondary cursor-pointer">
-              <Link href="/dashboard/questions">Ask a Question</Link>
+              <Link href="/dashboard/questions">Ask a Question</Link> */}
             </li>
           </ul>
         </div>
