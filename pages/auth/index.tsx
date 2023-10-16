@@ -41,7 +41,9 @@ export default function AuthPage() {
         //const errorCode = error.code;
         //const errorMessage = error.message;
         //setErrorMsg(errorMessage);
-        setErrorMsg('Account not found. Please create one or try a different login method.');
+        setErrorMsg(
+          'Invalid Account Information. Please check your email and password or create an account.',
+        );
       });
   };
 
