@@ -61,14 +61,12 @@ export default function FaqPage({
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
         <div
-          className={`flex flex-row items-center py-2 ${
-            changeTitle ? 'justify-between' : 'justify-center'
-          }`}
+          className={`flex flex-col lg:flex-row items-center py-2 gap-2 lg:gap-4 justify-center lg:justify-between`}
         >
-          {changeTitle && (
-            <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
-          )}
-          <div className="flex flex-row items-center gap-x-2">
+          <h4 className="font-bold md:text-4xl text-2xl my-4 text-white">
+            Frequently Asked Questions
+          </h4>
+          <div className="flex flex-row text-white items-center gap-x-2">
             <button
               onClick={() => {
                 if (disclosuresStatus.every((status) => status)) {
@@ -93,41 +91,20 @@ export default function FaqPage({
         {/* FAQ for lg-md */}
         {/* Uses different section for mobile because using 2 columns is buggy when expanding FAQs */}
         <div className="md:flex hidden justify-between p-6">
-          <div className="w-[49%] my-3 space-y-4 > * + *">
-            {faqs.map(
-              ({ question, answer }, idx) =>
-                idx % 2 == 0 && (
-                  <FaqDisclosure
-                    key={idx}
-                    question={question}
-                    answer={answer}
-                    isOpen={disclosuresStatus[idx]}
-                    toggleDisclosure={() => {
-                      const currDisclosure = [...disclosuresStatus];
-                      currDisclosure[idx] = !currDisclosure[idx];
-                      setDisclosureStatus(currDisclosure);
-                    }}
-                  />
-                ),
-            )}
-          </div>
-          <div className="w-[49%] my-3 space-y-4 > * + *">
-            {faqs.map(
-              ({ question, answer }, idx) =>
-                idx % 2 != 0 && (
-                  <FaqDisclosure
-                    key={idx}
-                    question={question}
-                    answer={answer}
-                    isOpen={disclosuresStatus[idx]}
-                    toggleDisclosure={() => {
-                      const currDisclosure = [...disclosuresStatus];
-                      currDisclosure[idx] = !currDisclosure[idx];
-                      setDisclosureStatus(currDisclosure);
-                    }}
-                  />
-                ),
-            )}
+          <div className="w-full grid grid-cols-2 gap-4">
+            {faqs.map(({ question, answer }, idx) => (
+              <FaqDisclosure
+                key={idx}
+                question={question}
+                answer={answer}
+                isOpen={disclosuresStatus[idx]}
+                toggleDisclosure={() => {
+                  const currDisclosure = [...disclosuresStatus];
+                  currDisclosure[idx] = !currDisclosure[idx];
+                  setDisclosureStatus(currDisclosure);
+                }}
+              />
+            ))}
           </div>
         </div>
         {/* FAQ for mobile */}
