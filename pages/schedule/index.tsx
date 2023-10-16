@@ -265,7 +265,6 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     >
       <div
         className="bg-white text-6xl text-black p-2 rounded-xl border-black border-2 text-left ml-6 mb-6"
-
         style={{ width: '275px', opacity: '0.7' }}
       >
         Schedule
@@ -297,7 +296,6 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
 
         {/* Event info card */}
         <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-xl bg-white p-4">
-
           <section>
             {eventData.title === '' ? (
               <div className="text-2xl">Click on an event for more info</div>
