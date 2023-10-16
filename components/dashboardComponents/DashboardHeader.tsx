@@ -28,9 +28,12 @@ export default function DashboardHeader() {
   return (
     <section>
       <header className="md:inline hidden justify-center py-2 md:p-4 items-center">
-        <div className="mx-auto flex flex-wrap justify-center lg:text-xl text-lg font-header text-white text-center rounded-xl bg-customPurple2 p-4 inline-block w-1/6 hover:bg-gray-600">
+        <div
+          className="mx-auto flex flex-wrap justify-center lg:text-xl text-lg font-header 
+        text-white text-center rounded-xl bg-purple-600 p-4 inline-block w-1/6 hover:bg-pink-600"
+        >
           <NavLink href="/profile" exact={true} className="mx-4">
-            Hacker Profile
+            <strong>Hacker Profile</strong>
           </NavLink>
           {/* <NavLink href="/dashboard/questions" exact={true} className="mx-4">
             Ask a Question

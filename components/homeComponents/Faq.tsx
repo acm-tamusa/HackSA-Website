@@ -54,8 +54,8 @@ export default function FaqPage({
     <div className="flex flex-col flex-grow">
       {changeTitle && (
         <Head>
-          <title>HackPortal</title>
-          <meta name="description" content="HackPortal's Frequently Asked Questions" />
+          <title>HackSA</title>
+          <meta name="description" content="HackSA's Frequently Asked Questions" />
         </Head>
       )}
       {/* <AboutHeader active="/about/faq" /> */}

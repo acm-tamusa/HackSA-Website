@@ -97,7 +97,7 @@ export default function AppHeader() {
           <Link href="/">
             <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
               {/* !change src !TODO CHANGE TO TAMUSA HACKSA LOGO */}
-              <Image src={'/assets/hp-logo.png'} width="45px" height="35px" />
+              <Image src={'/assets/HACKSA Logo.png'} width="45px" height="35px" />
               <span className="text-lg font-black md:z-0 md:text-3xl text-fuchsia-800">HackSA</span>
             </a>
           </Link>

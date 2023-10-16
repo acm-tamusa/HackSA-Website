@@ -65,11 +65,7 @@ export default function ProfileDialog({ onDismiss }: ProfileDialogProps) {
             <div className="text-lg font-bold">{name}</div>
             <div className="text-md">{role}</div>
           </div>
-        )) || (
-          <div className="p-4 text-lg font-bold">
-            Sign in to add events to your schedule, check in, and more!
-          </div>
-        )}
+        )) || <div className="p-4 text-lg font-bold">Sign in to view your profile</div>}
       </div>
       {(isSignedIn && (
         <>

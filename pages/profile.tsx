@@ -72,8 +72,17 @@ export default function ProfilePage() {
     <div
       className="p-8 w-full"
       style={{
-        backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Ftransparent_purpleBG.png?alt=media&token=d5ae999d-54aa-462c-a3f1-bf586de7800a&_gl=1*9e1u44*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc5MjM5My4xOC4xLjE2OTY3OTQ3NjMuNDkuMC4w')",
+        backgroundImage: 'url(assets/7.png)',
+        backgroundSize: 'cover',
+        overflowX: 'auto',
+        overflowY: 'auto',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        height: '100%',
+        width: '100%',
       }}
     >
       <div className="max-w-6xl mx-auto">
@@ -168,7 +177,8 @@ export default function ProfilePage() {
                   </h1>
                 </div>
                 <div>
-                  {!uploading ? (
+                  {/* Removed the Update Resume button since We dont need this */}
+                  {/* {!uploading ? (
                     <>
                       <input
                         id="resume"
@@ -188,7 +198,7 @@ export default function ProfilePage() {
                     </>
                   ) : (
                     <LoadIcon width={16} height={16} />
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

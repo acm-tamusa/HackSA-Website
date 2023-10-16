@@ -99,7 +99,7 @@ export default function Dashboard(props: {
         <section
           id="mainContent"
           className="lg:w-7/8 md:w-6/7 w-full px-6 py-3"
-          style={{ backgroundImage: 'url(assets/25.png)', backgroundSize: 'cover' }} //change here
+          style={{ backgroundImage: 'url(assets/24.png)', backgroundSize: 'cover' }} //change here
         >
           <DashboardHeader />
           {/* Spotlight & Announcements */}
@@ -169,7 +169,7 @@ export default function Dashboard(props: {
           {/* Challenges */}
           <div
             className="flex flex-col items-center p-2 rounded-xl border-black border-2 my-8"
-            style={{ backgroundImage: 'url(assets/24.png)', backgroundSize: 'cover' }}
+            style={{ backgroundImage: 'url(assets/25.png)', backgroundSize: 'cover' }}
           >
             <h1
               className="bg-white text-3xl text-center text-black p-4 rounded-xl border-black border-2 text-left w- mb-4"

@@ -11,20 +11,28 @@ export default function HomeHero() {
     <section
       className="min-h-screen p-4 bg-gradient-to-t from-purple-900 to-purple-5"
       style={{
-        backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Ftransparent_purpleBG.png?alt=media&token=d5ae999d-54aa-462c-a3f1-bf586de7800a&_gl=1*9e1u44*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc5MjM5My4xOC4xLjE2OTY3OTQ3NjMuNDkuMC4w')",
+        backgroundImage: `url('/assets/24.png')`,
+        backgroundSize: 'cover',
+        overflowX: 'auto',
+        overflowY: 'auto',
       }}
     >
       <div
         style={{ minHeight: 480 }}
         className="max-w-4xl mx-auto flex flex-col justify-center items-center gap-4"
       >
+        {/* @joshua You can hate me later */}
+        <br />
+        <br />
+        <br />
         {/* TAMUSA OUTLINE IMAGE */}
         <Image
-          src="https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Fpurple_Tamusa_outline.png?alt=media&token=9349c32f-34a5-41c7-9e91-057183239992&_gl=1*patkrz*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc0NjAwNi4xNS4xLjE2OTY3NDYwMTQuNTIuMC4w"
+          src="/assets/White_Tamusa_Outline.png"
           alt="Tamusa Outline"
-          width={1000}
-          height={775}
+          // !change Feel free to change the width and height of the image I can't get it the sizing right
+          width={'1900'}
+          height={'1200'}
+          objectFit="contain"
           priority={true}
         />
         <h1 className="text-center md:text-8xl text-6xl font-bold text-white">HackSA</h1>{' '}
@@ -88,9 +96,12 @@ function TimeToEvent() {
 
   return currentTime < eventStart ? (
     <p className="text-white text-md">
-      <strong>TIME UNTIL HACKSA</strong>: <span>{getTimeDifference()}</span>
+      <strong>EVENT STARTING IN . . .</strong>{' '}
+      <span>
+        <strong>{getTimeDifference()}</strong>
+      </span>
     </p>
   ) : (
-    <p>HAPPENING NOW</p>
+    <p className="text-white">HAPPENING NOW</p>
   );
 }

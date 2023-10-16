@@ -41,17 +41,16 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>HackPortal</title> {/* !change */}
-        <meta name="description" content="A default HackPortal instance" /> {/* !change */}
+        <title>HackSA</title> {/* !change */}
+        <meta name="description" content="A default HackSA instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeHero />
-      <HomeAbout answeredQuestions={props.answeredQuestion} />
-      {/* <HomeVideoStats /> */} {/* !changed Commented this video stuff out from the template*/}
-      <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
-      <HomeChallenges challenges={props.challenges} />
-      <HomeTeam members={props.fetchedMembers} />
-      <HomeSponsors sponsorCard={props.sponsorCard} />
+      {/* <HomeAbout answeredQuestions={props.answeredQuestion} /> */}
+      {/* <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} /> */}
+      {/* <HomeChallenges challenges={props.challenges} /> */}
+      {/* <HomeTeam members={props.fetchedMembers} /> */}
+      {/* <HomeSponsors sponsorCard={props.sponsorCard} /> */}
       <HomeFooter />
     </>
   );

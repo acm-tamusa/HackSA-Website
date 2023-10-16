@@ -24,7 +24,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
           <h2 className="my-2 text-center">
             {' '}
             {/* !change */}
-            If you would like to sponsor HackPortal, please reach out to us at&nbsp;
+            If you would like to sponsor HackSA, please reach out to us at&nbsp;
             <a
               href="mailto:email@organization.com"
               rel="noopener noreferrer"
