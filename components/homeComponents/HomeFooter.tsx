@@ -9,8 +9,10 @@ export default function HomeFooter() {
     <section
       className=" mt-16 px-6 py-8 md:text-base text-xs"
       style={{
-        backgroundImage:
-          "url('https://firebasestorage.googleapis.com/v0/b/hacksa-62c97.appspot.com/o/background_images%2Ftransparent_purpleBG.png?alt=media&token=d5ae999d-54aa-462c-a3f1-bf586de7800a&_gl=1*9e1u44*_ga*MTA5NjM2NjQ3My4xNjk2MDU0MDg2*_ga_CW55HF8NVT*MTY5Njc5MjM5My4xOC4xLjE2OTY3OTQ3NjMuNDkuMC4w')",
+        backgroundImage: `url('/assets/25.png')`,
+        backgroundSize: 'cover',
+        overflowX: 'auto',
+        overflowY: 'auto',
       }}
     >
       <hr className="my-4 bg-complementary" />
