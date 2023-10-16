@@ -7,7 +7,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 export default function HomeFooter() {
   return (
     <section
-      className=" mt-16 px-6 py-8 md:text-base text-xs"
+      className=" mt-0 px-6 py-8 md:text-base text-xs"
       style={{
         backgroundImage: `url('/assets/25.png')`,
         backgroundSize: 'cover',
