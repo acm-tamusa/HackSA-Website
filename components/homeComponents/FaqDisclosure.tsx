@@ -37,7 +37,7 @@ export default function FaqDisclosure({
         }`}
       >
         <Disclosure.Button
-          className={`p-2 bg-customPurple2 text-xl text-white font-medium text-left w-full ${
+          className={`p-2 bg-customPurple2 bg-opacity-50 text-xl text-white font-medium text-left w-full ${
             isOpen
               ? 'rounded-t-md'
               : 'rounded-md border-b-2 border-white transition duration-300 ease-in-out'
@@ -73,7 +73,7 @@ export default function FaqDisclosure({
           style={{ flexGrow: 1 }}
         >
           <Disclosure.Panel
-            className={`h-full py-2 p-2 bg-customPurple2 bg-opacity-75 text-white text-left rounded-b-md  ${
+            className={`h-full py-2 p-2 bg-customPurple2 bg-opacity-50 text-white text-left rounded-b-md  ${
               isOpen ? 'border-b-2 border-white transition duration-300 ease-in-out' : ''
             }`}
             static
