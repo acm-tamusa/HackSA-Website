@@ -46,7 +46,7 @@ export default function Home(props: {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeHero />
-      {/* <HomeAbout answeredQuestions={props.answeredQuestion} /> */}
+      <HomeAbout answeredQuestions={props.answeredQuestion} />
       {/* <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} /> */}
       {/* <HomeChallenges challenges={props.challenges} /> */}
       {/* <HomeTeam members={props.fetchedMembers} /> */}

@@ -33,12 +33,14 @@ export default function FaqDisclosure({
     <Disclosure>
       <div
         className={`transition-all duration-500 ease-in-out ${
-          isOpen ? 'bg-customPurple' : 'bg-transparent'
+          isOpen ? 'bg-customPurple rounded-lg' : 'bg-transparent rounded-sm'
         }`}
       >
         <Disclosure.Button
           className={`p-2 bg-customPurple2 text-white font-medium text-left w-full ${
-            isOpen ? '' : 'border-b-2 border-white transition duration-300 ease-in-out'
+            isOpen
+              ? 'rounded-t-md'
+              : 'rounded-md border-b-2 border-white transition duration-300 ease-in-out'
           }`}
           as="div"
         >
@@ -70,7 +72,7 @@ export default function FaqDisclosure({
           leaveTo="transform scale-95 opacity-0"
         >
           <Disclosure.Panel
-            className={`my-2 py-2 p-2 bg-customPurple2 text-white text-left  ${
+            className={`my-2 py-2 p-2 bg-customPurple2 text-white text-left rounded-b-md  ${
               isOpen ? 'border-b-2 border-white transition duration-300 ease-in-out' : ''
             }`}
             static
