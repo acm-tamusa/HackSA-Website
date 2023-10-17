@@ -41,7 +41,7 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>HackSA</title> {/* !change */}
+        <title>HackSA - Home</title> {/* !change */}
         <meta name="description" content="A default HackSA instance" /> {/* !change */}
         <link rel="icon" href="/favicon.png" />
       </Head>

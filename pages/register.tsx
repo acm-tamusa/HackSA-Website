@@ -185,10 +185,10 @@ export default function Register() {
   return (
     <div
       className="flex flex-col flex-grow"
-      style={{ backgroundImage: 'url("assets/schedulebg.png")' }}
+      style={{ backgroundImage: 'url("assets/25.png")', backgroundSize: 'cover' }}
     >
       <Head>
-        <title>Hacker Registration | HackSA</title>
+        <title>HackSA - Hacker Registration</title>
         <meta name="description" content="Register for [HACKATHON NAME]" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -196,21 +196,21 @@ export default function Register() {
       <section
         id="jumbotron"
         className="p-2 px-6"
-        style={{ backgroundImage: 'url("assets/18034e.png")' }}
+        style={{ backgroundImage: 'url("assets/24.png")', backgroundSize: 'cover' }}
       >
         <div className="max-w-4xl py-6 mx-auto flex flex-col items-center">
-          <div className="registrationTitle border-b-2 border-customPurple text-4xl font-bold text-center text-customPurple">
+          <div className="registrationTitle border-b-2 border-customPurple text-4xl font-bold text-center text-white">
             Hacker Registration
           </div>
 
-          <div className="text-1xl my-4 font-bold font-small text-center text-customPurple7">
+          <div className="text-2xl my-4 font-bold font-small text-center text-white">
             Please fill out the following fields. The application should take approximately 5
             minutes.
           </div>
         </div>
       </section>
 
-      <section className="bg-customPurple7 bg-cover bg-repeat lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-customPurple2">
+      <section className="bg-customPurple7 bg-cover bg-repeat lg:w-3/5 md:w-3/4 w-auto mx-auto mt-4 rounded-3xl md:py-10 py-6 px-20 mb-4 text-black">
         <Formik
           initialValues={formInitialValues}
           //validation
@@ -285,28 +285,28 @@ export default function Register() {
               noValidate
               className="registrationForm flex flex-col max-w-4xl px-6 w-full text-lg"
             >
-              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+              <div className="text-3xl py-1 border-b-2 border-customPurple mr-auto mt-8">
                 General
               </div>
               {generalQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+              <div className="text-3xl py-1 border-b-2 border-customPurple mr-auto mt-8">
                 School Info
               </div>
               {schoolQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+              <div className="text-3xl py-1 border-b-2 border-customPurple mr-auto mt-8">
                 Hackathon Experience
               </div>
               {hackathonExperienceQuestions.map((obj, idx) => (
                 <DisplayQuestion key={idx} obj={obj} values={values} onChange={handleChange} />
               ))}
 
-              <div className="text-2xl py-1 border-b-2 border-customPurple mr-auto mt-8">
+              <div className="text-3xl py-1 border-b-2 border-customPurple mr-auto mt-8">
                 Event Info
               </div>
               {eventInfoQuestions.map((obj, idx) => (
@@ -336,7 +336,7 @@ export default function Register() {
               <div className="my-8">
                 <button
                   type="submit"
-                  className="mr-auto cursor-pointer px-4 py-2 rounded-md bg-customPurple4 hover:bg-customPurple"
+                  className="mr-auto cursor-pointer px-4 py-2 rounded-md bg-customPurple hover:bg-pink-600"
                   onClick={() => setFormValid(!(!isValid || !dirty))}
                 >
                   Submit
