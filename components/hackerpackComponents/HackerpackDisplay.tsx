@@ -146,7 +146,7 @@ export default function HackerpackDisplay(props: {
   return (
     <div className="flex flex-col md:flex-row flex-grow flex-wrap">
       <Head>
-        <title>HackerPacks</title>
+        <title>HackSA - HackerPacks</title>
         <meta name="description" content="HackerPack Information" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -163,7 +163,11 @@ export default function HackerpackDisplay(props: {
       )}
 
       {/* Generate main content based on mainContent setting [notion, markdown, html] */}
-      <section id="mainContent" className={`px-6 py-3 relative w-full ${adjustedWidth}`}>
+      <section
+        id="mainContent"
+        className={`px-6 py-3 relative w-full ${adjustedWidth}`}
+        style={{ backgroundImage: 'url(assets/BG.jpg)', backgroundSize: 'cover' }}
+      >
         {hackerpackSettings.mainContent === 'notion' && (
           <NotionRenderer
             recordMap={props.content}
