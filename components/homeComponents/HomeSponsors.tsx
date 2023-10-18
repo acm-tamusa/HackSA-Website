@@ -6,7 +6,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
 
   useEffect(() => {
     setSponsor(props.sponsorCard);
-  });
+  }, []);
 
   return (
     sponsor.length != 0 && (
@@ -16,8 +16,8 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
           {/* Sponsor Card */}
           <section className="flex flex-wrap justify-center p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-              {sponsor.map(({ link, reference }, idx) => (
-                <SponsorCard key={idx} link={link} reference={reference} />
+              {sponsor.map(({ link, reference, name }, idx) => (
+                <SponsorCard key={idx} link={link} reference={reference} name={name} />
               ))}
             </div>
           </section>

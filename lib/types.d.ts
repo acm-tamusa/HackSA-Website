@@ -242,6 +242,7 @@ type ScheduleEvent = {
 
 type Sponsor = {
   link: string;
+  name: string;
   reference: string;
 };
 

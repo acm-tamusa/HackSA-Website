@@ -50,7 +50,7 @@ export default function Home(props: {
       {/* <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} /> */}
       {/* <HomeChallenges challenges={props.challenges} /> */}
       {/* <HomeTeam members={props.fetchedMembers} /> */}
-      {/* <HomeSponsors sponsorCard={props.sponsorCard} /> */}
+      <HomeSponsors sponsorCard={props.sponsorCard} />
       <HomeFooter />
     </>
   );

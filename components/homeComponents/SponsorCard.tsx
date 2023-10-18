@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 interface SponsorCardProps {
   link: string;
+  name: string;
   reference: string;
 }
 
@@ -26,12 +27,12 @@ export default function SponsorCard(props: SponsorCardProps) {
           setImgSrc(url);
           setLoading(false);
         })
-        .catch((error) => {
+        .catch((_) => {
           setLoading(false);
           console.error('Could not find matching image file');
         });
     }
-  }, []);
+  }, [props.reference]);
 
   if (loading) return <LoadIcon width={100} height={100} />;
 
@@ -41,6 +42,7 @@ export default function SponsorCard(props: SponsorCardProps) {
         <div className="flex justify-center">
           <a href={props.link} target="_blank" className="" rel="noreferrer">
             <Image src={imgSrc} width={250} height={150} layout="fixed" objectFit="contain" />
+            <p className="text-center font-bold">{props.name}</p>
           </a>
           <br></br>
         </div>
