@@ -43,7 +43,7 @@ export default function Home(props: {
       <Head>
         <title>HackSA - Home</title> {/* !change */}
         <meta name="description" content="A default HackSA instance" /> {/* !change */}
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/assets/HACKSA Logo.png" />
       </Head>
       <HomeHero />
       <HomeAbout answeredQuestions={props.answeredQuestion} />
