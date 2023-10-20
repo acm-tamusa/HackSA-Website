@@ -190,7 +190,7 @@ export default function Register() {
       <Head>
         <title>HackSA - Hacker Registration</title>
         <meta name="description" content="Register for [HACKATHON NAME]" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/HACKSA Logo.png" />
       </Head>
 
       <section
