@@ -11,10 +11,10 @@ export default function HomeAbout(props: { answeredQuestions: AnsweredQuestion[]
         >
           <p className="">
             {' '}
-            HackSA is Texas A&M University - San Antonio`&apos;`s ever hackathon. We have created
-            this event centered around positive social impact. Whether that means addressing
-            problems that affect the silent few or issues that are present worldwide, it is up to
-            you and your team of 4 to decide how to approach our challenges with this theme in mind.
+            HackSA is Texas A&M University - San Antonio&apos;s ever hackathon. We have created this
+            event centered around positive social impact. Whether that means addressing problems
+            that affect the silent few or issues that are present worldwide, it is up to you and
+            your team of 4 to decide how to approach our challenges with this theme in mind.
             <br />
             <br />
             We have made this event with students of all skill levels in mind. From first years to
