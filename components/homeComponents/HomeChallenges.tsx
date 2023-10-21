@@ -64,8 +64,10 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
 
   return (
     challenges.length != 0 && (
-      <section className="md:p-12  p-6">
-        <div className="font-bold  md:text-4xl text-2xl my-4 text-complementary">Challenges</div>
+      <section className="md:p-12  p-6 bg-gradient-to-tr from-purple-500 to-pink-600">
+        <div className="font-bold text md:text-4xl text-white text-2xl my-4 text-complementary">
+          Challenges (Swipe for more)
+        </div>
         <div className="flex flex-col justify-center items-center w-full">
           {/* Challenge Orgs Selectors*/}
           <div className="w-full">

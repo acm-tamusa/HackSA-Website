@@ -47,7 +47,7 @@ function PortalApp({ Component, pageProps }: AppProps) {
                 (process.env.NODE_ENV !== 'development' && (
                   <link rel="manifest" href="/manifest.json" />
                 ))}
-              <link href="/favicon.png" rel="icon" type="image/png" sizes="16x16" />
+              <link href="/assets/HACKSA Logo.png" rel="icon" type="image/png" sizes="16x16" />
               <Head>
                 <meta name="theme-color" content="#5D5FEF" />
               </Head>

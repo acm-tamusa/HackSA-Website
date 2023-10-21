@@ -14,7 +14,7 @@ const SCANTYPES_COLLECTION = '/scan-types';
 const ILLEGAL_SCAN_NAME = 'Illegal Scan';
 
 /**
- *
+ 
  * Check if a user has checked in into the event
  *
  * @param scans list of scantypes

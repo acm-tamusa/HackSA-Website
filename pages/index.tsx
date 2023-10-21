@@ -48,9 +48,9 @@ export default function Home(props: {
       <HomeHero />
       <HomeAbout answeredQuestions={props.answeredQuestion} />
       {/* <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} /> */}
-      {/* <HomeChallenges challenges={props.challenges} /> */}
+      <HomeChallenges challenges={props.challenges} />
       {/* <HomeTeam members={props.fetchedMembers} /> */}
-      {/* <HomeSponsors sponsorCard={props.sponsorCard} /> */}
+      <HomeSponsors sponsorCard={props.sponsorCard} />
       <HomeFooter />
     </>
   );
