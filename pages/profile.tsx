@@ -70,7 +70,7 @@ export default function ProfilePage() {
 
   return (
     <div
-      className="p-8 w-full"
+      className="p-8 w-full "
       style={{
         backgroundImage: 'url(assets/7.png)',
         backgroundSize: 'cover',
@@ -90,7 +90,7 @@ export default function ProfilePage() {
           {' '}
           Profile
         </h1>
-        <section className="w-full py-5">
+        <section className="w-full py-12 ">
           <div className="flex flex-col md:flex-row gap-x-10">
             <div
               className={`bg-gradient-to-b from-purple-900 via-pink-800 to-black w-full md:w-2/3 rounded-xl p-4 flex flex-col justify-around`}
