@@ -16,7 +16,7 @@ type DropdownMenuProps = {
 
 const sectionStyle = 'bg-indigo-200 w-full pl-3 h-8 cursor-pointer relative flex items-center';
 const subsectionStyle = 'bg-indigo-100 w-full pl-9 pr-3 h-8 flex items-center';
-
+// test
 /**
  * Menu for navigating within the Hackerpack on a mobile device.
  *
