@@ -46,6 +46,9 @@ export default function AdminHeader() {
           <NavLink href="/admin/users" exact={true} className="mx-4">
             Users Dashboard
           </NavLink>
+          <NavLink href="/admin/report" exact={true} className="mx-4">
+            Scan Report
+          </NavLink>
           {isAuthorized(user) && (
             <NavLink href="/admin/stats" exact={true} className="mx-4">
               Stats at a Glance
@@ -65,6 +68,9 @@ export default function AdminHeader() {
             </li>
             <li className="p-2 hover:bg-[#DCDEFF]">
               <Link href="/admin/users">Users Dashboard</Link>
+            </li>
+            <li className="p-2 hover:bg-[#DCDEFF]">
+              <Link href="/admin/report">Scan Report</Link>
             </li>
             {isAuthorized(user) && (
               <li className="p-2 hover:bg-[#DCDEFF]">
