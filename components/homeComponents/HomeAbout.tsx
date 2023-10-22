@@ -18,10 +18,10 @@ export default function HomeAbout(props: { answeredQuestions: AnsweredQuestion[]
             <br />
             <br />
             We have made this event with students of all skill levels in mind. From first years to
-            Grad students, we offer challenges of various difficulties and many approachable options
-            for participation. As well as a variety of workshops to help you get started. This event
-            is open to everyone as we want to provide a space for students to learn, collaborate,
-            and create something unique.
+            graduate level students, we offer challenges of various difficulties and many
+            approachable options for participation. As well as a variety of workshops to help you
+            get started. This event is open to everyone as we want to provide a space for students
+            to learn, collaborate, and create something unique.
             <br />
             <br />
             The Team here at HackSA understands that the world is not perfect, but we believe that
